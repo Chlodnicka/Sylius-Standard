@@ -18,4 +18,17 @@ class Product extends BaseProduct
     {
         return new ProductTranslation();
     }
+
+    /** @ORM\Column(type="string", columnDefinition="ENUM('red', 'blue', 'green')") */
+    private string $color;
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(string $color): void
+    {
+        $this->color = $color;
+    }
 }
