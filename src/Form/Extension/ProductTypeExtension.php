@@ -14,7 +14,6 @@ final class ProductTypeExtension extends AbstractTypeExtension
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            // Adding new fields works just like in the parent form type.
             ->add('color', ChoiceType::class, [
                 'required' => false,
                 'label'    => 'app.form.product.color',
@@ -22,8 +21,7 @@ final class ProductTypeExtension extends AbstractTypeExtension
                     'red'   => 'red',
                     'green' => 'green',
                     'blue'  => 'blue',
-                ],
-                'default'  => 'red'
+                ]
             ]);
     }
 
